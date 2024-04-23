@@ -1,0 +1,34 @@
+{
+  "name": "@sv-components/functional",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "dist/functional.cjs.js",
+  "module": "dist/functional.es.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsup --format esm --dts src/index.ts",
+    "dev": "vite",
+    "lint": "eslint --ext .ts .",
+    "test": "vitest run"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lit-html": "^2.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "tsup": "^7.2.0",
+    "vite": "^4.4.9"
+  },
+  "tsup": {
+    "entry": {
+      "functional": "src/comp.ts"
+    },
+    "sourcemap": true,
+    "clean": true
+  }
+}
